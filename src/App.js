@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from './components/Navbar/Navbar'
+import './App.css'
 
 const App = () => {
+	// TRUE -> ENG || FALSE -> FIN
+	const [language, setLanguage] = useState(true)
 	return (
-		<div>
-			<h1>hello</h1>
-		</div>
+		<>
+			<Navbar language={language} setLanguage={setLanguage} />
+		</>
 	)
 }
 
