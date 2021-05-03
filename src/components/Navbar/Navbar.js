@@ -20,7 +20,7 @@ const Navbar = ({ language, setLanguage }) => {
 					My Portfolio
 				</Typography>
 				<div className={classes.imageContainer}>
-					<a href='https://github.com/iMMoCodes' target='_blank'>
+					<a href='https://github.com/iMMoCodes' target='_blank' rel='noreferrer'>
 						<img className={classes.gitHub} src={github} alt='github' />
 					</a>
 					{/* FLAG */}

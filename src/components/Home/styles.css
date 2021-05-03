@@ -17,12 +17,12 @@
 	margin: 150px 0;
 }
 
-#Dragon {
-	animation: dragon 10s linear infinite;
+#WebDev {
+	animation: spinning 10s linear infinite;
 	transform-origin: center;
 }
 
-@keyframes dragon {
+@keyframes spinning {
 	from {
 		transform: rotateZ(0deg);
 	}

@@ -1,8 +1,8 @@
 .aboutContainer {
 	/* background by SVGBackgrounds.com */
-	background-color: #787878;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='938' height='938' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='88' y1='88' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23313030'/%3E%3Cstop offset='1' stop-color='%234d4c4c'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='75' y1='76' x2='168' y2='160'%3E%3Cstop offset='0' stop-color='%23393939'/%3E%3Cstop offset='0.09' stop-color='%23474747'/%3E%3Cstop offset='0.18' stop-color='%23515151'/%3E%3Cstop offset='0.31' stop-color='%23585858'/%3E%3Cstop offset='0.44' stop-color='%235d5d5d'/%3E%3Cstop offset='0.59' stop-color='%23616161'/%3E%3Cstop offset='0.75' stop-color='%23646464'/%3E%3Cstop offset='1' stop-color='%23666666'/%3E%3C/linearGradient%3E%3Cfilter id='c' x='0' y='0' width='200%25' height='200%25'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='12' /%3E%3C/filter%3E%3C/defs%3E%3Cpolygon fill='url(%23a)' points='0 174 0 0 174 0'/%3E%3Cpath fill='%23000' fill-opacity='0.52' filter='url(%23c)' d='M121.8 174C59.2 153.1 0 174 0 174s63.5-73.8 87-94c24.4-20.9 87-80 87-80S107.9 104.4 121.8 174z'/%3E%3Cpath fill='url(%23b)' d='M142.7 142.7C59.2 142.7 0 174 0 174s42-66.3 74.9-99.3S174 0 174 0S142.7 62.6 142.7 142.7z'/%3E%3C/svg%3E");
-	background-repeat: no-repeat;
+	background-color: #4d4d4d;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23555555' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%235c5c5c' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23646464' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%236b6b6b' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23737373' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%237a7a7a' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23828282' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+	background-size: cover;
 }
 
 .aboutTitle {
@@ -11,7 +11,7 @@
 	font-size: 5rem;
 	text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474;
 }
-
+/* Who What When Where */
 .aboutArea {
 	width: 100%;
 	display: flex;
@@ -34,6 +34,14 @@
 	align-items: center;
 }
 
+/* Description  */
+.descriptionContainer {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Stacks */
 .aboutStackContainer {
 	margin: 0 auto;
 	width: 80%;
@@ -55,7 +63,36 @@
 	width: 75px;
 }
 
+/* Summary */
+.summaryContainer {
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.singleSummary {
+	display: flex;
+	align-items: center;
+}
+
+.summaryImage {
+	margin-right: 10px;
+	height: 30px;
+}
+
+.summaryText {
+	margin: 5px 0;
+	font-size: 2rem;
+	text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272;
+}
+
+/* Responsiveness */
 @media screen and (max-width: 768px) {
+	.summaryContainer {
+		width: 80%;
+	}
 	.aboutTitle {
 		font-size: 2.5rem;
 	}
