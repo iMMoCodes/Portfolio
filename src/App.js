@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import About from './components/About/About'
+import Projects from './components/Projects/Projects'
 import './App.css'
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
 			<Navbar language={language} setLanguage={setLanguage} />
 			<Home />
 			<About language={language} />
+			<Projects language={language} />
 		</>
 	)
 }

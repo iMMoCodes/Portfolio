@@ -28,13 +28,13 @@ const Navbar = ({ language, setLanguage }) => {
 				</div>
 				{/* ICONS */}
 				<div className={classes.iconContainer}>
-					<IconButton className={classes.iconButtons}>
+					<IconButton className={classes.iconButtons} href='#about'>
 						<InfoIcon className={classes.infoIcon} />
 						<Typography variant='h5' className={classes.subTitle}>
 							&nbsp;{language ? 'About' : 'Yleistä'}
 						</Typography>
 					</IconButton>
-					<IconButton className={classes.iconButtons}>
+					<IconButton className={classes.iconButtons} href='#projects'>
 						<WorkIcon className={classes.workIcon} />
 						<Typography variant='h5' className={classes.subTitle}>
 							&nbsp;{language ? 'Projects' : 'Projektit'}

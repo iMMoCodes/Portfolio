@@ -19,7 +19,7 @@ import './styles.css'
 
 const About = ({ language }) => {
 	return (
-		<main className='aboutContainer'>
+		<main className='aboutContainer' id='about'>
 			<h1 className='aboutTitle'>{language ? 'About' : 'Tietoa Minusta'}</h1>
 			<section className='aboutArea'>
 				<div className='aboutQuestion'>
