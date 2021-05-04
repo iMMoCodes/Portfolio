@@ -27,22 +27,100 @@
 	align-items: center;
 	justify-content: space-around;
 	margin-top: 20px;
-	flex: 33%;
 }
 
 .projectChoiceButton {
-	height: 50px;
-	width: 200px;
-	border-radius: 999px;
+	font-size: 1.3rem;
+	background-color: hsl(323 21% 16%);
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	color: hsl(317 100% 54%);
+	border: hsl(317 100% 54%) 0.125em solid;
+	padding: 0.1em 1em;
+	border-radius: 0.25em;
+	text-shadow: 0 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+	box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
+	position: relative;
+}
+
+.projectChoiceButton::before {
+	pointer-events: none;
+	content: '';
+	position: absolute;
+	background: hsl(317 100% 54%);
+	top: 120%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: perspective(0.5em) rotateX(20deg) scale(1, 0.45);
+	filter: blur(1.7em);
+	opacity: 0.7;
+}
+
+.projectChoiceButton::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 2em 0.5em hsl(317 100% 54%);
+	opacity: 0;
+	transition: opacity 100ms linear;
+}
+
+.projectChoiceButton:hover::after,
+.projectChoiceButton:focus::after {
+	opacity: 1;
+}
+.projectChoiceButton:hover::before,
+.projectChoiceButton:focus::before {
+	opacity: 1;
+}
+
+.projectChoiceButton:hover,
+.projectChoiceButton:focus {
+	background: hsl(317 100% 54%);
+	color: hsl(323 21% 16%);
 }
 
 /* Project Image */
 .projectImageArea {
 	margin-top: 20px;
-	flex: 33%;
+	width: 700px;
+	height: 500px;
+	position: relative;
+	border-radius: 1.5em;
+	overflow: hidden;
+	transition: transform 750ms ease;
 }
-.projectImage {
-	height: 400px;
+
+.projectImageButtonContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 0.3) 20%, hsl(0 0% 0% / 0.7));
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	opacity: 0;
+	transition: opacity 750ms linear;
+}
+
+@media (hover) {
+	.projectImageArea:hover,
+	.projectImageArea:focus-within {
+		transform: scale(1.02);
+	}
+	.projectImageArea:hover .projectImageButtonContainer,
+	.projectImageArea:focus-within .projectImageButtonContainer,
+	.projectImageArea:hover .projectStackArea,
+	.projectImageArea:focus-within .projectStackArea {
+		opacity: 1;
+	}
 }
 
 /* Project Info */
@@ -52,7 +130,7 @@
 	align-items: center;
 	justify-content: space-around;
 	margin-top: 20px;
-	flex: 33%;
+	max-width: 300px;
 }
 
 .projectsSubTitle {
@@ -79,16 +157,51 @@
 	color: #212121;
 	text-shadow: 1px -1px 0 #767676;
 	font-size: 1.4rem;
+	text-align: center;
+	list-style: none;
 }
 
 /* Project Stack */
 .projectStackArea {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	background: linear-gradient(hsl(0 0% 0% / 0.7), hsl(0 0% 0% / 0.3) 80%, hsl(0 0% 0% / 0));
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	opacity: 0;
+	transition: opacity 750ms linear;
 }
 
 .projectStackImage {
 	height: 50px;
 	margin: 0 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+	.projectsArea {
+		flex-direction: column;
+	}
+	.projectChoiceButtons {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.projectChoiceButton {
+		width: 200px;
+		margin: 10px 10px;
+		word-wrap: break-word;
+	}
+	.projectImageArea {
+		width: 100%;
+		background-position: center;
+	}
+	.projectInfoArea {
+		margin: 20px auto;
+	}
 }

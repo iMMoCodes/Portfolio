@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './styles.css'
 import { data } from './projectData'
+import GitHubIcon from '@material-ui/icons/GitHub'
 console.log(data)
 
 const Projects = ({ language }) => {
@@ -29,15 +30,23 @@ const Projects = ({ language }) => {
 						{language ? data[5].name : data[5].nimi}
 					</button>
 				</div>
-				<div className='projectImageArea'>
-					<img className='projectImage' src={data[projectId].image} alt='Project' />
+				<div className='projectImageArea' style={{ backgroundImage: `url("${data[projectId].image}")` }}>
+					<div className='projectStackArea'>
+						{data[5].stacks.map((stack) => {
+							return <img className='projectStackImage' src={stack} alt='stack' />
+						})}
+					</div>
+					<div className='projectImageButtonContainer'>
+						<a href={data[projectId].live} className='projectChoiceButton' style={{ margin: '0 10px' }} target='_blank' rel='noreferrer'>
+							{language ? 'Test Live' : 'Koita itse'}
+						</a>
+						<a href={data[projectId].github} className='projectChoiceButton' style={{ margin: '0 10px' }} target='_blank' rel='noreferrer'>
+							<GitHubIcon fontSize='small' />
+						</a>
+					</div>
 				</div>
 				<div className='projectInfoArea'>
 					<h1 className='projectsSubTitle'>{language ? data[projectId].name : data[projectId].nimi}</h1>
-					<div className='projectLiveButtons'>
-						<button>{language ? 'View Live' : 'Testaa itse'}</button>
-						<button>Github</button>
-					</div>
 					<p className='projectParagraph'>{language ? data[projectId].description : data[projectId].kuvaus}</p>
 					<h2>{language ? 'What I learned' : 'Mitä opin'}</h2>
 					<ul>
@@ -49,11 +58,6 @@ const Projects = ({ language }) => {
 					<p className='projectParagraph'>{language ? data[projectId].problem : data[projectId].ongelma}</p>
 				</div>
 			</section>
-			<div className='projectStackArea'>
-				{data[5].stacks.map((stack) => {
-					return <img className='projectStackImage' src={stack} alt='stack' />
-				})}
-			</div>
 		</main>
 	)
 }

@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
 		width: '100vw',
 		display: 'flex',
 		backgroundColor: '#212121',
+		zIndex: 999,
 	},
 	title: {
 		flexGrow: 1,
@@ -41,12 +42,13 @@ const useStyles = makeStyles((theme) => ({
 	// Icons
 	iconContainer: {
 		display: 'flex',
+		width: '500px',
 	},
 	infoIcon: {
 		color: '#90caf9',
 	},
 	workIcon: {
-		color: '#4e342e',
+		color: '#bcaaa4',
 	},
 	contactIcon: {
 		color: '#a5d6a7',

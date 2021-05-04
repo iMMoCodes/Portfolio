@@ -13,8 +13,8 @@ import js from '../../assets/js.svg'
 export const data = [
 	{
 		id: 1,
-		name: 'Immogram',
-		nimi: 'Immogram',
+		name: 'ImmoGram',
+		nimi: 'ImmoGram',
 		description: '',
 		kuvaus: '',
 		learned: '',
