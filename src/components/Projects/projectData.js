@@ -89,7 +89,7 @@ export const data = [
 		description: 'One of my early practice projects using javascript. You can add to or remove items from shopping cart and it calculates total cost of your purchases.',
 		kuvaus: 'Yksi ensimmäisistä harjoittelu projekteistani javascriptin avulla. Voit lisätä tai poistaa tavaroita ostoskärrystä ja näet ostostesi yhteishinnan.',
 		learned: ['Use of async / await', 'Use of fetch', 'Use of local / session storage', 'Use of higher order functions', 'Use of "this"'],
-		problem: "This project was pretty much copied from youtube and was pretty long time ago. I don't really remember my biggest problem on this project",
+		problem: "This project was pretty much copied from youtube and was pretty long time ago. I don't really remember my biggest problem on this project.",
 		ongelma: 'Tämä projekti on suurimmaksi osaksi kopioitu YouTube videon opastuksella ja tehty melko kauan sitten. En muista enää mikä oli suurin ongelmani tässä projektissa.',
 		live: 'https://my-shopping-cart-app.netlify.app/',
 		github: 'https://github.com/iMMoCodes/Shopping-Cart',
