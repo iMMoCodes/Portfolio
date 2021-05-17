@@ -40,7 +40,7 @@ const Navbar = ({ language, setLanguage }) => {
 							&nbsp;{language ? 'Projects' : 'Projektit'}
 						</Typography>
 					</IconButton>
-					<IconButton className={classes.iconButtons}>
+					<IconButton className={classes.iconButtons} href="#contact">
 						<ContactMailIcon className={classes.contactIcon} />
 						<Typography variant='h5' className={classes.subTitle}>
 							&nbsp;{language ? 'Contact Me' : 'Ota Yhteyttä'}

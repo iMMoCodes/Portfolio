@@ -20,7 +20,7 @@ import './styles.css'
 const About = ({ language }) => {
 	return (
 		<main className='aboutContainer' id='about'>
-			<h1 className='aboutTitle'>{language ? 'About' : 'Tietoa Minusta'}</h1>
+			<h1 className='aboutMainTitle'>{language ? 'About' : 'Tietoa Minusta'}</h1>
 			<section className='aboutArea'>
 				<div className='aboutQuestion'>
 					<h2>{language ? 'Who?' : 'Kuka?'}</h2>
@@ -43,7 +43,7 @@ const About = ({ language }) => {
 			<section className='descriptionContainer'>
 				<p className='summaryText'>
 					{language
-						? "I love challenges, problem solving and I'm always eager to learn new things and to improve. I think these are the reasons why I enjoy coding so much. I started my coding career at freeCodeCamp in August from scratch and really fell in love with it and things escalated pretty quickly from there. After I understood the theory parts of language I started to write code by following YouTube tutorials. Now I have reached a point where I believe in my own skills and can create projects by myself. Currently I'm looking for a chance to put my skills to a test and improve even more in an actual work enviroment."
+						? "I love challenges, problem solving and I'm always eager to learn new things and to improve. I think these are the reasons why I enjoy coding so much. I started my coding career at freeCodeCamp in August from scratch and really fell in love with it and things escalated pretty quickly from there. After I understood the theory parts of language I started to write code by following YouTube tutorials. Now I have reached a point where I believe in my own skills and can create projects by myself. Currently I'm looking for a chance to put my skills to a test and improve more in an actual work enviroment with people who share similar passion into coding."
 						: 'Rakastan haasteita, ongelmanratkaisua ja olen aina innokas oppimaan uusia asioita ja kehittämään itseäni. Pidänkin ohjelmoinnista varmasti näistä syistä. Aloitin ohjelmointiurani freeCodeCamp nettisivulla elokuussa. Aloitin alkeista ja asiat kehittyivät siitä melko nopeasti. Kun ymmärsin teoriaosuuden kielestä, aloin kirjoittamaan koodia seuraamalla YouTube videoita. Olen nyt saavuttanut pisteen jossa olen luottavainen omiin taitoihini ja osaan tehdä projekteja itsenäisesti. Nyt etsin mahdollisuutta päästä testaamaan taitojani ja kehittämään itseäni lisää oikeassa työympäristössä.'}
 				</p>
 			</section>
