@@ -32,7 +32,7 @@ const Projects = ({ language }) => {
 				</div>
 				<div className='projectImageArea' style={{ backgroundImage: `url("${data[projectId].image}")` }}>
 					<div className='projectStackArea'>
-						{data[5].stacks.map((stack) => {
+						{data[projectId].stacks.map((stack) => {
 							return <img className='projectStackImage' src={stack} alt='stack' />
 						})}
 					</div>
@@ -48,12 +48,6 @@ const Projects = ({ language }) => {
 				<div className='projectInfoArea'>
 					<h1 className='projectsSubTitle'>{language ? data[projectId].name : data[projectId].nimi}</h1>
 					<p className='projectParagraph'>{language ? data[projectId].description : data[projectId].kuvaus}</p>
-					<h2>{language ? 'What I learned' : 'Mitä opin'}</h2>
-					<ul>
-						{data[5].learned.map((item) => {
-							return <li className='projectList'>{item}</li>
-						})}
-					</ul>
 					<h2>{language ? 'Biggest problem' : 'Suurin ongelma'}</h2>
 					<p className='projectParagraph'>{language ? data[projectId].problem : data[projectId].ongelma}</p>
 				</div>
