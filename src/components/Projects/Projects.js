@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './styles.css'
 import { data } from './projectData'
 import GitHubIcon from '@material-ui/icons/GitHub'
-console.log(data)
 
 const Projects = ({ language }) => {
 	const [projectId, setProjectId] = useState(0)
@@ -33,7 +32,7 @@ const Projects = ({ language }) => {
 				<div className='projectImageArea' style={{ backgroundImage: `url("${data[projectId].image}")` }}>
 					<div className='projectStackArea'>
 						{data[projectId].stacks.map((stack) => {
-							return <img className='projectStackImage' src={stack} alt='stack' />
+							return <img key={stack} className='projectStackImage' src={stack} alt='stack' />
 						})}
 					</div>
 					<div className='projectImageButtonContainer'>
@@ -48,7 +47,7 @@ const Projects = ({ language }) => {
 				<div className='projectInfoArea'>
 					<h1 className='projectsSubTitle'>{language ? data[projectId].name : data[projectId].nimi}</h1>
 					<p className='projectParagraph'>{language ? data[projectId].description : data[projectId].kuvaus}</p>
-					<h2>{language ? 'Biggest problem' : 'Suurin ongelma'}</h2>
+					<h2>{language ? 'Biggest problem & solution' : 'Suurin ongelma & ratkaisu'}</h2>
 					<p className='projectParagraph'>{language ? data[projectId].problem : data[projectId].ongelma}</p>
 				</div>
 			</section>
