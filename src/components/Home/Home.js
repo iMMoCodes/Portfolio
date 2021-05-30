@@ -1,10 +1,15 @@
 import React from 'react'
 
 import './styles.css'
+import LoadPicture from "../../assets/BG-Moment.jpg"
+import backgroundVideo from "../../assets/BG-compressed.mp4"
 
 const Home = () => {
 	return (
 		<div className='homeContainer'>
+			<video id="videoBG" poster={LoadPicture} autoPlay muted loop>
+				<source src={backgroundVideo} type="video/mp4"></source>
+			</video>
 			<div className='home-image'>
 				<svg width='700' height='700' viewBox='0 0 700 700' fill='none' xmlns='http://www.w3.org/2000/svg'>
 					<g id='HomeSpin'>

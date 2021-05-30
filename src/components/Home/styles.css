@@ -1,8 +1,19 @@
-.homeContainer {
-	background-image: url('https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+#videoBG {
+	position: fixed;
+	z-index: -99;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	#videoBG {
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-aspect-ratio: 16/9) {
+	#videoBG {
+		width: auto;
+		height: 100%;
+	}
 }
 
 .home-image {
@@ -32,7 +43,16 @@
 }
 
 @media screen and (max-width: 768px) {
+	.homeContainer {
+		background-image: url('../../assets/BG-Moment.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 	.home-image {
+		display: none;
+	}
+	#videoBG {
 		display: none;
 	}
 	.mobileViewHomeContainer {
