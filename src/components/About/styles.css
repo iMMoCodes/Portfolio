@@ -1,6 +1,6 @@
 .aboutContainer {
 	/* background by SVGBackgrounds.com */
-	background: rgb(86, 88, 91);
+	background: rgb(83, 84, 87);
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%234f4f4f' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23626265' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%234d4e4c' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23616163' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%234b4d49' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%235f5f61' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23484c46' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%235e5e5f' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23464b43' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%235c5c5d' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23444a40' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%235b5b5b' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
 	background-attachment: fixed;
 	background-size: cover;

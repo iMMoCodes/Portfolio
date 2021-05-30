@@ -222,6 +222,7 @@
     .contactsInfo {
         top: 0;
         left: 20%;
+        height: 330px;
     }
 }
 
@@ -261,10 +262,11 @@
     }
     .contactForm {
         height: 850px;
+        width: 100%;
     }
     .contactsInfo {
         left: 0px;
-        width: 260px;
+        width: 100%;
         padding: 15px;
     }
 }
